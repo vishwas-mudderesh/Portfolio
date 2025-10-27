@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>vishwas — Portfolio</title>
+  <meta name="description" content="Portfolio of Ahmed Allali" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund+Guides&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <!-- Floating background tech words -->
+  <div class="float-bg" aria-hidden="true">
+    <div class="tech t1">JAVASCRIPT</div>
+    <div class="tech t2">DJANGO</div>
+    <div class="tech t3">PYTHON</div>
+    <div class="tech t4">HTML</div>
+    <div class="tech t5">CSS</div>
+    <div class="tech t6">REACT</div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">VM</div>
+        <div>
+          <h1>Vishwas Mudderesh</h1>
+          <div style="font-size:12px;color:var(--muted)">Python Fullstack Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: -120px;">
+    <!-- HERO -->
+    <section id="home" class="hero" style="height: 50vh;">
+      <div class="intro" >
+        <h2>Python Fullstack Developer</h2>
+        <p class="muted">I build secure, scalable applications using Python, Django and modern JavaScript frameworks.</p>
+
+        <div class="icons" role="list">
+          <!-- GitHub -->
+          <a class="icon-btn" href="https://github.com/vishwas-mudderesh" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.89.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.69 0-1.26.45-2.28 1.2-3.09-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.22 1.18a11.17 11.17 0 0 1 2.93-.39c.99.01 1.99.13 2.93.39 2.24-1.5 3.22-1.18 3.22-1.18.63 1.65.23 2.87.11 3.17.75.81 1.2 1.83 1.2 3.09 0 4.42-2.71 5.39-5.29 5.67.42.36.8 1.08.8 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          <!-- Email -->
+          <a class="icon-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=vishwasmudderesh@gmail.com&su=Hello%20Vishwas&body=Hi%20Vishwas,%20I%20visited%20your%20portfolio." title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a class="icon-btn" href="https://www.linkedin.com/in/vishwas-mudderesh" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM8.5 8h3.8v2.2h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.8 2.6 4.8 6V24h-4v-7.6c0-1.8 0-4.1-2.5-4.1-2.5 0-2.9 1.9-2.9 3.9V24h-4V8z"/></svg>
+          </a>
+
+          <!-- Resume download -->
+          <a class="icon-btn" href="C:\Users\Roopa\Desktop\web_Technology\CSS\porfolio\Vishwas_resume.pdf" download title="Download Resume" aria-label="Download Resume">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 16l4-5h-3V4h-2v7H8l4 5zM20 18v2H4v-2H2v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2h-2z"/></svg>
+          </a>
+        </div>
+
+        <div style="margin-top:22px">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn secondary" href="#contact">Hire me</a>
+        </div>
+      </div>
+
+      <aside>
+        <!-- Right column intentionally left blank (no photo as requested) but with animated card -->
+      <img src="https://i.pinimg.com/474x/97/da/5a/97da5a7ed22203164ee1e84ddea93190.jpg" alt="Profile photo" style="width:100%; height:400px; object-fit:cover; border-radius:12px;">
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 style="position: relative;;top: -65px;">ABOUT ME</h2>
+      <div class="about-grid" style="position: relative;;top: -77px;">
+        <div class="about-cards">
+          <div class="about-card">
+            <h4 >So,who am I? </h4>
+            <p style="color:var(--muted); font-size: 0.90rem;">Hi, I&apos;m Vishwas M, a passionate Python developer and an aspiring cloud engineer. I have completed 60+ LeetCode problems, ranging from easy to hard, honing my problem-solving and algorithmic skills. I&apos;ve built projects including FoodKiosk, e-commerce frontends, and personal portfolios, showcasing my expertise in web development and full-stack concepts. I&apos;m a quick learner who adapts easily to new technologies and challenging situations, always striving to deliver efficient, scalable, and well-structured solutions.</p>
+          </div>
+
+          <div class="about-card">
+            <h4>Education</h4>
+            <p style="color:var(--muted);font-size: 0.9rem;"><strong>Global Academy of Technology , Bengaluru</strong><br>Electronics & Communication Engineering<br>CGPA: <strong>8.24</strong></p>
+          </div>
+
+          <div class="about-card">
+            <h4>Internship</h4>
+            <p style="color:var(--muted);font-size: 0.9rem;">Intern at <strong>Scontinent Technologies</strong> — Python Full Stack Development Intern (Jan 10, 2025 - Apr 12, 2025)</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="about-photo" role="img" aria-label="Profile photo placeholder"><img src="c:\Users\Roopa\Downloads\vishwas-removebg-preview-modified.png" alt="" style="height: 370px;width: 360px;"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS page (first skills) -->
+    <section id="skills" class="section" style="margin-top: -383px;">
+      <h2 style="margin-top: -40px;">SKILLS</h2>
+        <div class="skills-grid" style="margin-top: -20px;">
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\python-svgrepo-com (1).svg" alt="Python"><span class="skill-name">PYTHON</span></div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\javascript-svgrepo-com.svg" alt="JavaScript"><span class="skill-name">JAVASCRIPT</span></div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\react-svgrepo-com.svg" alt="React"><span class="skill-name">REACT</span></div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\html-5-svgrepo-com.svg" alt="HTML"><span class="skill-name">HTML</span></div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\css-3-svgrepo-com.svg" alt="CSS"><span class="skill-name">CSS</span></div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\djangoproject-svgrepo-com.svg" alt="Django"><span class="skill-name">DJANGO</span></div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\aws-svgrepo-com.svg" alt="AWS"><span class="skill-name">AWS</span></div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\sql-svgrepo-com.svg" alt="SQL"><span class="skill-name">CSS</span>SQL</div>
+          <div class="skill-icon"><img src="c:\Users\Roopa\Downloads\api-svgrepo-com.svg" alt="RestApi"><span class="skill-name">RESTAPi</span></div>
+        </div>  
+    </section>
+
+    <!-- PROJECTS - carousel (4th page) -->
+    <section id="projects" class="section" style="margin-top: -68px;">
+      <h2 style="margin-top: -40px;">PROJECTS</h2>
+      <div class="carousel-wrap">
+        <div class="carousel" aria-roledescription="carousel">
+          <div class="slides" id="slides">
+            <div class="slide">
+              <img style="object-fit: contain;" src="https://img.freepik.com/premium-photo/modern-digital-kiosk_1153109-3459.jpg?semt=ais_hybrid&w=740&q=80" alt="Project 1 screenshot">
+              <h4>FOOD KIOSK</h4>
+              <p style="color:var(--muted);">Developed a Food Kiosk web application using HTML, CSS, and Django, enabling users to seamlessly browse and order food items online. Integrated secure payment processing for smooth transactions and implemented automatic order ID generation for efficient tracking. Designed a user-friendly interface to ensure quick and intuitive navigation. The application streamlines the entire ordering process, making it efficient for both users and administrators.</p>
+              <a href="https://github.com/vishwas-mudderesh/Food-Kiosk" title="GitHub Link"><img src="c:\Users\Roopa\Downloads\github-svgrepo-com.svg" alt="GitHub" style="margin-top:8px"></a>
+            </div>
+            <div class="slide">
+              <img src="https://img.freepik.com/premium-vector/currency-exchange-money-conversion-rupee-dollar-icon-isolated-white-background-with-arrow_615232-1178.jpg" alt="Project 2 screenshot">
+              <h4>CURRENCY CONVERTER</h4>
+              <p style="color:var(--muted)">Developed a Currency Converter web application using HTML, CSS, and JavaScript that allows users to convert between 150+ global currencies in real time. The application integrates the latest currency exchange API, ensuring accurate and up-to-date conversion rates. It uses async and await in JavaScript to handle asynchronous API calls smoothly, providing a seamless user experience without page reloads.</p>
+              <a href="https://github.com/vishwas-mudderesh/currency-converter" title="GitHub Link"><img src="c:\Users\Roopa\Downloads\github-svgrepo-com.svg" alt="GitHub" style="margin-top:8px"></a>
+            </div>
+            <div class="slide">
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/025/746/868/small/portfolio-button-speech-bubble-banner-label-portfolio-vector.jpg" alt="Project 3 screenshot">
+              <h4>PORTFOLIO</h4>
+              <p style="color:var(--muted)">Created a personal portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills. It features a modern, responsive design that adapts seamlessly to all devices. Interactive elements and smooth animations enhance the user experience and navigation. The portfolio highlights my web development work, achievements, and contact details in a clean layout.</p>
+              <a href="#" title="GitHub Link"><img src="c:\Users\Roopa\Downloads\github-svgrepo-com.svg" alt="GitHub" style="margin-top:8px"></a>
+            </div>
+            <div class="slide">
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/008/974/544/small/e-commerce-set-icon-symbol-template-for-graphic-and-web-design-collection-logo-illustration-vector.jpg" alt="Project 4 screenshot">
+              <h4>E-COMMERCE FRONTEND</h4>
+              <p style="color:var(--muted)">Developed an E-commerce front-end application using React.js with a focus on dynamic and responsive design. It includes features like product listing, cart management, and user authentication for a seamless shopping experience. An integrated admin panel allows easy management of products, orders, and inventory. The application efficiently uses React hooks and state management for real-time updates. Overall, it provides a modern, interactive interface for both customers and administrators.</p>
+              <a href="#" title="GitHub Link"><img src="c:\Users\Roopa\Downloads\github-svgrepo-com.svg" alt="GitHub" style="margin-top:8px"></a>
+            </div>
+            <div class="slide">
+              <img src="https://miro.medium.com/v2/resize:fit:1400/0*Gt4_eo_WQcBv1cQr.png" alt="Project 4 screenshot">
+              <h4>TO-DO APP</h4>
+              <p style="color:var(--muted)">I developed a To-Do List application using React.js to help users organize and track their daily tasks efficiently. It allows users to add, edit, delete, and mark tasks as completed with instant updates. The app utilizes React hooks and local storage to maintain data even after refreshing the page. It features a responsive and minimal design, ensuring smooth usability across all devices. This project highlights my skills in component-based development and state management using React.</p>
+              <a href="https://github.com/vishwas-mudderesh/ToDo" title="GitHub Link"><img src="c:\Users\Roopa\Downloads\github-svgrepo-com.svg" alt="GitHub" style="margin-top:8px"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button id="prev" class="btn secondary">◀</button>
+          <div style="display:flex;gap:8px;align-items:center" id="dots"></div>
+          <button id="next" class="btn">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" style="height:68vh;">
+      <h3>CONTACT</h3>
+      <div class="contact-grid">
+        <form id="contactForm" action="https://formspree.io/f/xovpvowy" method="POST">
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Your name" required />
+          
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Your email" required />
+          
+          <label for="message">Message</label>
+          <textarea name="message" placeholder="Your message" rows="3" required></textarea>
+          
+          <button type="submit" class="btn">Send message</button>
+          <div id="formStatus" style="color:var(--muted);font-size:14px"></div>
+        </form>
+    
+        <aside>
+          <div class="about-card">
+            <h4>Reach Me</h4>
+            <p style="color:var(--muted)">
+              Email:
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vishwasmudderesh@gmail.com&su=Hello%20Vishwas&body=Hi%20Vishwas,%20I%20visited%20your%20portfolio."
+                 target="_blank">
+                vishwasmudderesh@gmail.com
+              </a>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer style="height: 100px;">
+    <div class="container"><div style="opacity:.9">© <span id="year"></span> Vishwas-mudderesh — Built with ✨</div></div>
+  </footer>
+
+  <script src="portfolio.js">
+  </script>
+</body>
+</html>
