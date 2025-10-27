@@ -1,13 +1,13 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Contact form stub
-const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  status.textContent = 'Sending...';
-  setTimeout(() => {status.textContent = 'Message sent!';form.reset();}, 800);
-});
+// const form = document.getElementById('contactForm');
+// const status = document.getElementById('formStatus');
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   status.textContent = 'Sending...';
+//   setTimeout(() => {status.textContent = 'Message sent!';form.reset();}, 800);
+// });
 
 // Carousel logic - show one card at a time, moves left/right
 (function(){
