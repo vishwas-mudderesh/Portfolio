@@ -62,3 +62,23 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('.skills-grid'));
 
+// ===== PROJECT CAROUSEL LOGIC =====
+const slides = document.getElementById('slides');
+if (slides) {
+  const slideCount = slides.children.length;
+  let idx = 0;
+
+  function updateCarousel() {
+    slides.style.transform = `translateX(${-idx * 100}%)`;
+  }
+
+  document.getElementById('prev').addEventListener('click', () => {
+    idx = (idx - 1 + slideCount) % slideCount;
+    updateCarousel();
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    idx = (idx + 1) % slideCount;
+    updateCarousel();
+  });
+}
