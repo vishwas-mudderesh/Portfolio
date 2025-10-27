@@ -207,6 +207,10 @@
     font-size: 15px;
     overflow-x: hidden;
   }
+  main {
+    padding-top: 90px; /* ensures top space so navbar doesn't overlap */
+  }
+  
 
   /* Navigation */
   header {
@@ -246,7 +250,7 @@
   }
 
   .about-photo {
-    width: 90%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
   }
