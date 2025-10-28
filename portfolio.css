@@ -193,49 +193,50 @@
       z-index: 10;
     }
     
-    @media (max-width:980px) {
-      .hero { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-
-
-    /* 🌙 MOBILE VIEW STYLING */
+ /* 🌙 MOBILE VIEW STYLING */
 @media (max-width: 900px) {
-  /* General */
+
+  /* General layout */
   body {
     font-size: 15px;
     overflow-x: hidden;
   }
-  main {
-    padding-top: 90px; /* ensures top space so navbar doesn't overlap */
-  }
-  
 
-  /* Navigation */
+  main {
+    padding-top: 90px; /* ensures navbar doesn't overlap content */
+  }
+
+  /* Sticky navbar fix */
   header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 50;
+    background: rgba(5, 10, 20, 0.8);
+    backdrop-filter: blur(8px);
   }
 
   .nav {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   nav a {
-    margin: 4px;
+    margin: 2px;
     font-size: 14px;
+    color: var(--muted);
   }
 
-  /* Hero / Home section */
+  /* Hero section */
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
     padding: 100px 20px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .cta {
@@ -247,12 +248,19 @@
   .about-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 80px 20px;
   }
 
   .about-photo {
-    width: 80%;
+    width: 75%;
     height: auto;
     margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(124, 156, 255, 0.25);
+  }
+
+  .about-cards {
+    margin-top: 20px;
   }
 
   /* Skills section */
@@ -264,69 +272,95 @@
 
   .skill-card {
     padding: 12px;
+    border-radius: 12px;
   }
 
+  /* === Project Carousel Fix === */
+  .carousel-wrap {
+    position: relative;
+    max-width: 95%;
+    margin: 40px auto;
+    text-align: center;
+  }
 
-  /* ===== PROJECT CAROUSEL FIX ===== */
-.carousel-wrap {
-  position: relative;
-  max-width: 760px;
-  margin: 60px auto;
-  text-align: center;
-}
+  .carousel {
+    overflow: hidden;
+    border-radius: 12px;
+  }
 
-.carousel {
-  overflow: hidden;
-  border-radius: 12px;
-}
+  .slides {
+    display: flex;
+    transition: transform 450ms cubic-bezier(.2,.9,.3,1);
+  }
 
-.slides {
-  display: flex;
-  transition: transform 450ms cubic-bezier(.2,.9,.3,1);
-}
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    background: var(--card);
+    border-radius: 12px;
+  }
 
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 18px;
-  background: var(--card);
-  border-radius: 12px;
-}
+  .slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 
-.slide img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-}
+  /* Carousel control buttons */
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
 
-/* ✅ Carousel control buttons */
-.carousel-controls {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 12px;
-}
+  .carousel-controls .btn {
+    background: var(--accent);
+    color: #021128;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(124,156,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-.btn-slide {
-  background: var(--accent);
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  color: #021128;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+  .carousel-controls .btn.secondary {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
 
-.btn-slide:hover {
-  background: #9ab6ff;
-}
-  
+  .carousel-controls .btn:hover {
+    background: #9ab6ff;
+    transform: scale(1.05);
+  }
 
+  /* Dots indicator */
+  #dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
 
-  /* Contact */
+  #dots .small-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  #dots .small-dot.active {
+    background: var(--accent);
+  }
+
+  /* Contact section */
   .contact-grid {
     grid-template-columns: 1fr;
     padding: 0 20px;
@@ -342,31 +376,6 @@
 
   footer {
     font-size: 13px;
+    padding-bottom: 40px;
   }
 }
-/* 🌙 Fix hero & index image height on mobile */
-@media (max-width: 900px) {
-  .section.full,
-  .hero {
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 100px; /* adjust for sticky navbar */
-    padding-bottom: 60px;
-  }
-
-  .hero img,
-  .profile-img,
-  .about-photo {
-    max-width: 90%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
-    margin: 0 auto;
-    box-shadow: 0 0 20px rgba(124, 156, 255, 0.2);
-  }
-}
-
-
