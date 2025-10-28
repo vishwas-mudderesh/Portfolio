@@ -20,6 +20,7 @@
       line-height:1.5;
       position:relative;overflow-x:hidden;
     }
+
     
     section {
         padding: 60px 10px;
@@ -315,7 +316,7 @@
   /* Ensures content comes below navbar */
   main,
   section {
-    margin-top: 66px !important;
+    margin-top: 95px !important;
   }
 
   /* === Hero Section === */
