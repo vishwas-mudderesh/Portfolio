@@ -204,6 +204,33 @@
       position: relative;
       z-index: 10;
     }
+
+    /* 🖥️ Desktop Navbar */
+@media (min-width: 901px) {
+  .menu-toggle {
+    display: none; /* hide burger on desktop */
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: 600;
+  }
+
+  nav a:hover {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
     
  /* 🌙 FINAL MOBILE VIEW FIXES */
 @media (max-width: 900px) {
@@ -214,19 +241,81 @@
     overflow-x: hidden;
   }
 
+  html {
+    scroll-padding-top: 160px; /* slightly more space for mobile navbar */
+  }
+
+  
+  
+ /* 🌙 Mobile Navbar Styles */
   header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    background: rgba(6, 10, 18, 0.95);
-    backdrop-filter: blur(8px);
+    background: rgba(6,10,18,0.85);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    padding: 10px 0;
   }
+
+  header .container.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes burger to right */
+    padding: 0 20px;
+    width: 100%;
+  }
+  
+  /* Brand (logo + name) alignment */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Burger menu button – visible only on mobile */
+  .menu-toggle {
+    margin-left: auto;
+    display: block;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 26px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+  }
+
+  /* Hide nav links by default on mobile */
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* When active, show vertically */
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+  }
+
 
   /* Ensures content comes below navbar */
   main,
   section {
-    margin-top: 86px !important;
+    margin-top: 66px !important;
   }
 
   /* === Hero Section === */
@@ -234,8 +323,11 @@
     grid-template-columns: 1fr;
     text-align: center;
     padding: 110px 20px 60px;
+    text-align: left;
     top: 0 !important;
   }
+
+  
 
   .hero img {
     width: 80%;
@@ -243,6 +335,7 @@
     border-radius: 12px;
     margin: 0 auto;
   }
+
 
   /* === About Section === */
   #about {
@@ -306,7 +399,7 @@
     color: #021128;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 30%;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
